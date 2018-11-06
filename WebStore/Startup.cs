@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 
-namespace WebStoreTest
+namespace WebStore
 {
     public class Startup
     {
@@ -43,12 +43,12 @@ namespace WebStoreTest
                     template: "{controller=Home}/{action=index}/{id?}");
             });
 
-            //var hello = Configuration["CustomHelloWorld"];
+            var hello = Configuration["CustomHelloWorld"];
 
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync(hello);
-            //});
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync(hello);
+            });
         }
     }
 }
