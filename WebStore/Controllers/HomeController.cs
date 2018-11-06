@@ -19,7 +19,8 @@ namespace WebStore.Controllers
                 FirstName = "Иван",
                 Patronymic = "Иванович",
                 LastName = "Иванов",
-                Age = 22
+                Age = 22,
+                Detail = "холост, детей нет"
             },
             new EmployeeView
             {
@@ -27,13 +28,24 @@ namespace WebStore.Controllers
                 FirstName = "Владислав",
                 Patronymic = "Степанович",
                 LastName = "Оченьстариков",
-                Age = 125
+                Age = 125,
+                Detail = "Выпивает"
             }
         };
 
         public IActionResult Index()
         {
             return View(_employees);
+        }
+
+        public IActionResult Details(int id)
+        {
+            foreach (var el in _employees)
+            {
+                if (el.Id == id) Person = el;
+            }
+
+            return View(Person);
         }
     }
 }
