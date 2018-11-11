@@ -40,15 +40,8 @@ namespace WebStore
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=index}/{id?}");
+                    template: "{controller=Employees}/{action=index}/{id?}");
             });
-
-            //var hello = Configuration["CustomHelloWorld"];
-
-            //app.Run(async (context) =>
-            //{
-            //    await context.Response.WriteAsync(hello);
-            //});
         }
     }
 }
