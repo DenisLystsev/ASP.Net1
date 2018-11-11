@@ -2,7 +2,11 @@
     ViewBag.Title = "Home | E-Shopper";
 }
 
-   
+@section top{ 
+    @await Html.PartialAsync("HomePartial/_Slider")
+}
+
+  
 
     <section>
         <div class="container">

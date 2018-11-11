@@ -30,12 +30,14 @@
 </head><!--/head-->
 
 <body>
-    
-@await  Html.PartialAsync("_Header", false)
 
-@RenderBody()
+    @await  Html.PartialAsync("SharedPartial/_Header")
 
-@await  Html.PartialAsync("_Footer, false")
+    @RenderSectionAsync("top", false)
+
+    @RenderBody()
+
+    @await Html.PartialAsync("SharedPartial/_Footer")
 
 
 
