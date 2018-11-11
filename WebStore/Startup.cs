@@ -40,7 +40,7 @@ namespace WebStore
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Employees}/{action=index}/{id?}");
+                    template: "{controller=Home}/{action=index}/{id?}");
             });
         }
     }
