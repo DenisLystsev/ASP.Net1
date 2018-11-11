@@ -40,12 +40,7 @@ namespace WebStore.Controllers
 
         public IActionResult Details(int id)
         {
-            foreach (var el in _employees)
-            {
-                if (el.Id == id) Person = el;
-            }
-
-            return View(Person);
+            return View(_employees[id-1]);
         }
     }
 }

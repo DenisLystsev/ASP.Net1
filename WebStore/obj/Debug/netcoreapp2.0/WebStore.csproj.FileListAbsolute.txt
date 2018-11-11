@@ -9,3 +9,14 @@ D:\Проекты C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.Assembly
 D:\Проекты C#\ASP.Net1\WebStore\bin\Debug\netcoreapp2.0\WebStore.pdb
 D:\Проекты C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.dll
 D:\Проекты C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.pdb
+D:\C#\ASP.Net1\WebStore\bin\Debug\netcoreapp2.0\WebStore.deps.json
+D:\C#\ASP.Net1\WebStore\bin\Debug\netcoreapp2.0\WebStore.runtimeconfig.json
+D:\C#\ASP.Net1\WebStore\bin\Debug\netcoreapp2.0\WebStore.runtimeconfig.dev.json
+D:\C#\ASP.Net1\WebStore\bin\Debug\netcoreapp2.0\WebStore.dll
+D:\C#\ASP.Net1\WebStore\bin\Debug\netcoreapp2.0\WebStore.pdb
+D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.csprojResolveAssemblyReference.cache
+D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.csproj.CoreCompileInputs.cache
+D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.AssemblyInfoInputs.cache
+D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.AssemblyInfo.cs
+D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.dll
+D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.pdb
