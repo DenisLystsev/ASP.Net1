@@ -31,11 +31,15 @@
 
 <body>
 
-    @await  Html.PartialAsync("SharedPartial/_Header")
+    @await Html.PartialAsync("SharedPartial/_Header")
 
     @RenderSectionAsync("top", false)
 
-    @RenderBody()
+    
+
+            @RenderBody()
+
+       
 
     @await Html.PartialAsync("SharedPartial/_Footer")
 
@@ -48,4 +52,5 @@
     <script src="~/js/jquery.prettyPhoto.js"></script>
     <script src="~/js/main.js"></script>
 </body>
+
 </html>
