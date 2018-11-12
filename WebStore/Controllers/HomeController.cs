@@ -53,5 +53,10 @@ namespace WebStore.Controllers
             return View();
         }
 
+        public IActionResult NotF()
+        {
+            return View();
+        }
+
     }
 }
