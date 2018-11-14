@@ -19,17 +19,17 @@ namespace WebStore.Controllers
                 FirstName = "Иван",
                 Patronymic = "Иванович",
                 LastName = "Иванов",
-                Age = 22,
-                Detail = "холост, детей нет"
+                Age = 37,
+                Position = "Директор"
             },
             new EmployeeView
             {
                 Id = 2,
                 FirstName = "Владислав",
                 Patronymic = "Степанович",
-                LastName = "Оченьстариков",
-                Age = 125,
-                Detail = "Выпивает"
+                LastName = "Cтариков",
+                Age = 28,
+                Position = "Заместитель директора"
             }
         };
 
