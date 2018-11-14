@@ -3,7 +3,12 @@
     ViewBag.Title = "Details";
 }
 
-    <h4>@Model.FirstName @Model.LastName детальная информация</h4>
+<h4>Детальная информация сотрудника @Model.FirstName @Model.LastName </h4>
 
-    <p>Дополнительная информация: @Model.Detail</p>
-    @Html.ActionLink("Назад к списку сотрудников", "Index")
+<p>Имя: @Model.FirstName</p>
+<p>Отчество: @Model.Patronymic</p>
+<p>Фамилия: @Model.LastName</p>
+<p>Возраст: @Model.Age</p>
+<p>Должность: @Model.Position</p>
+
+@Html.ActionLink("Назад к списку сотрудников", "Index")
