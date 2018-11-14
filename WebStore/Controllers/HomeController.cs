@@ -3,44 +3,60 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebStore.Models;
 
 namespace WebStore.Controllers
 {
     public class HomeController : Controller
     {
-        public EmployeeView Person;
-
-        private readonly List<EmployeeView> _employees = new List<EmployeeView>
-        {
-            new EmployeeView
-            {
-                Id = 1,
-                FirstName = "Иван",
-                Patronymic = "Иванович",
-                LastName = "Иванов",
-                Age = 22,
-                Detail = "холост, детей нет"
-            },
-            new EmployeeView
-            {
-                Id = 2,
-                FirstName = "Владислав",
-                Patronymic = "Степанович",
-                LastName = "Оченьстариков",
-                Age = 125,
-                Detail = "Выпивает"
-            }
-        };
-
         public IActionResult Index()
         {
-            return View(_employees);
+            return View();
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Cart()
         {
-            return View(_employees[id-1]);
+            return View();
         }
+
+        public IActionResult Checkout()
+        {
+            return View();
+        }
+
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+
+        public IActionResult Blog()
+        {
+            return View();
+        }
+
+        public IActionResult BlogSingle()
+        {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult ProductDetails()
+        {
+            return View();
+        }
+
+        public IActionResult Shop()
+        {
+            return View();
+        }
+
+        public IActionResult NotF()
+        {
+            return View();
+        }
+
     }
 }

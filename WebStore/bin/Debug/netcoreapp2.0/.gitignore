@@ -1,3 +1,5 @@
 *.deps.json
 *.dll
 *.pdb
+/WebStore.dll
+/WebStore.pdb

@@ -1,33 +1,23 @@
-﻿
-@model IEnumerable<WebStore.Models.EmployeeView>
+﻿@{
+    ViewBag.Title = "Home | E-Shopper";
+    Layout = "_LayoutSidebar";
+}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Список сотрудников</title>
-</head>
-<body>
-    <h4>Список сотрудников</h4>
-    <hr />
-    <table>
-        <tr>
-            <td>Имя</td>
-            <td>Отчество</td>
-            <td>Фамилия</td>
-            <td>Возраст</td>
-        </tr>
+@section top{ 
+    @await Html.PartialAsync("HomePartial/_Slider")
+}
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.FirstName</td>
-                <td>@item.Patronymic</td>
-                <td>@item.LastName</td>
-                <td>@item.Age</td>
-                <td>@Html.ActionLink("Детали", "Details", new { id = item.Id })</td>
-            </tr>
-        }
-    </table>
-</body>
-</html>
+  
+
+   
+
+                
+                    @await  Html.PartialAsync("HomePartial/_Features")
+
+@await Html.PartialAsync("HomePartial/_CategoryTab")
+
+                   @await Html.PartialAsync("HomePartial/_RecommendedItems")
+                    
+
+                
+           

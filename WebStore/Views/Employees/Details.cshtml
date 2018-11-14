@@ -1,0 +1,9 @@
+﻿@model WebStore.Models.EmployeeView
+@{
+    ViewBag.Title = "Details";
+}
+
+    <h4>@Model.FirstName @Model.LastName детальная информация</h4>
+
+    <p>Дополнительная информация: @Model.Detail</p>
+    @Html.ActionLink("Назад к списку сотрудников", "Index")
