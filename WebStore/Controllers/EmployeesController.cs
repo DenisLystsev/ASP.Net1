@@ -9,30 +9,6 @@ namespace WebStore.Controllers
 {
     public class EmployeesController : Controller
     {
-        public EmployeeView Person;
-
-        private readonly List<EmployeeView> _employees = new List<EmployeeView>
-        {
-            new EmployeeView
-            {
-                Id = 1,
-                FirstName = "Иван",
-                Patronymic = "Иванович",
-                LastName = "Иванов",
-                Age = 37,
-                Position = "Директор"
-            },
-            new EmployeeView
-            {
-                Id = 2,
-                FirstName = "Владислав",
-                Patronymic = "Степанович",
-                LastName = "Cтариков",
-                Age = 28,
-                Position = "Заместитель директора"
-            }
-        };
-
         public IActionResult Index()
         {
             return View(_employees);
