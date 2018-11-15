@@ -8,7 +8,7 @@ namespace WebStore.Infrastructure.Interfaces
 {
     //Интерфейс для работы с сотрудниками
 
-    interface IEmployeesData
+    public interface IEmployeesData
     {
         //Получение списка сотрудников
         IEnumerable<EmployeeView> GetAll();
