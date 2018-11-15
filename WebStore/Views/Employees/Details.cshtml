@@ -5,10 +5,16 @@
 
 <h4>Детальная информация сотрудника @Model.FirstName @Model.LastName </h4>
 
-<p>Имя: @Model.FirstName</p>
-<p>Отчество: @Model.Patronymic</p>
-<p>Фамилия: @Model.LastName</p>
-<p>Возраст: @Model.Age</p>
-<p>Должность: @Model.Position</p>
+<div class="table-responsive cart_info">
+    <table class="table table-condensed">
+        <tr>
+            <p>Имя: @Model.FirstName</p>
+            <p>Отчество: @Model.Patronymic</p>
+            <p>Фамилия: @Model.LastName</p>
+            <p>Возраст: @Model.Age</p>
+            <p>Должность: @Model.Position</p>
+        </tr>
+    </table>
+</div>
 
-@Html.ActionLink("Назад к списку сотрудников", "Index")
+    @Html.ActionLink("Назад к списку сотрудников", "Index")

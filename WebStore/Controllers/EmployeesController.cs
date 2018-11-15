@@ -8,7 +8,7 @@ using WebStore.Infrastructure.Interfaces;
 
 namespace WebStore.Controllers
 {
-    [Route("users")]
+    //[Route("users")]
     public class EmployeesController : Controller
     {
         private readonly IEmployeesData _employeesData;
