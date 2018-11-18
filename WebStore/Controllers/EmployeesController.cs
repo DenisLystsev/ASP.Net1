@@ -34,7 +34,7 @@ namespace WebStore.Controllers
             return View(employee);
         }
 
-        //Добавление или редакирование сотрудника
+        //Добавление или редактирование сотрудника
         [Route("edit/{id?}")]
         public IActionResult Edit(int? id)
         {
@@ -57,7 +57,7 @@ namespace WebStore.Controllers
         [Route("edit/{id?}")]
         public IActionResult Edit(EmployeeView model)
         {
-            if(model.Id<0)
+            if(model.Id>0)
             {
                 var dbItem = _employeesData.GetById(model.Id);
 

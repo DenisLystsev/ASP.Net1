@@ -1,25 +1,26 @@
 ﻿
 @model IEnumerable<WebStore.Models.EmployeeView>
-@{ 
+@{
     ViewBag.Title = "Index";
 }
 
 
-    <h4>Список сотрудников</h4>
-    <hr />
-    
-    <table class="table table-bordered">
-        <tr>
-            <td> </td>
-            <td>Имя</td>
-            <td>Отчество</td>
-            <td>Фамилия</td>
-            <td>Возраст</td>
-            <td> </td>
-        </tr>
+<h4>Список сотрудников</h4>
+<hr />
+<a asp-action="Edit" class="btn btn-success"> Добавить </a>
+<hr />
+<table class="table table-bordered">
+    <tr>
+        <td> </td>
+        <td>Имя</td>
+        <td>Отчество</td>
+        <td>Фамилия</td>
+        <td>Возраст</td>
+        <td> </td>
+    </tr>
 
-        @foreach (var item in Model)
-        {
+    @foreach (var item in Model)
+    {
         <tr>
             <td><a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a></td>
             <td>@item.FirstName</td>
@@ -28,5 +29,5 @@
             <td>@item.Age</td>
             <td>@Html.ActionLink("Детали", "Details", new { id = item.Id })</td>
         </tr>
-        }
-    </table>
+    }
+</table>
