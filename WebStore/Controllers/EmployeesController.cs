@@ -35,6 +35,7 @@ namespace WebStore.Controllers
         }
 
         //Добавление или редакирование сотрудника
+        [Route("edit/{id?}")]
         public IActionResult Edit(int? id)
         {
             EmployeeView model;
