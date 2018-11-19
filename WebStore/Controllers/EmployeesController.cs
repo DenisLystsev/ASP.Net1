@@ -57,26 +57,32 @@ namespace WebStore.Controllers
         [Route("edit/{id?}")]
         public IActionResult Edit(EmployeeView model)
         {
-            if(model.Id>0)
+            //Проверяем модель на валидность
+            if (ModelState.IsValid)
             {
-                var dbItem = _employeesData.GetById(model.Id);
+                if (model.Id > 0)
+                {
+                    var dbItem = _employeesData.GetById(model.Id);
 
-                if(ReferenceEquals(dbItem, null))
-                    return NotFound();
+                    if (ReferenceEquals(dbItem, null))
+                        return NotFound();
 
-                dbItem.FirstName = model.FirstName;
-                dbItem.Patronymic = model.Patronymic;
-                dbItem.LastName = model.LastName;
-                dbItem.Age = model.Age;
-                dbItem.Position = model.Position;
+                    dbItem.FirstName = model.FirstName;
+                    dbItem.Patronymic = model.Patronymic;
+                    dbItem.LastName = model.LastName;
+                    dbItem.Age = model.Age;
+                    dbItem.Position = model.Position;
+                }
+                else
+                {
+                    _employeesData.AddNew(model);
+                }
+                _employeesData.Commit();
+
+                return RedirectToAction(nameof(Index));
             }
-            else
-            {
-                _employeesData.AddNew(model);
-            }
-            _employeesData.Commit();
-
-            return RedirectToAction(nameof(Index));
+            //Если модель не валидна, возвращаем ее на представление
+            return View(model);
         }
 
         //Удаление сотрудника
