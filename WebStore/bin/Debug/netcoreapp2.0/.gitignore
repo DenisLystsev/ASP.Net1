@@ -3,3 +3,5 @@
 *.pdb
 /WebStore.dll
 /WebStore.pdb
+/WebStore.deps.json
+/WebStore.runtimeconfig.dev.json
