@@ -4,43 +4,87 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Models;
+using WebStore.Infrastructure.Interfaces;
 
 namespace WebStore.Controllers
 {
+    [Route("users")]
     public class EmployeesController : Controller
     {
-        public EmployeeView Person;
+        private readonly IEmployeesData _employeesData;
 
-        private readonly List<EmployeeView> _employees = new List<EmployeeView>
+        public EmployeesController(IEmployeesData employeesData)
         {
-            new EmployeeView
-            {
-                Id = 1,
-                FirstName = "Иван",
-                Patronymic = "Иванович",
-                LastName = "Иванов",
-                Age = 22,
-                Detail = "холост, детей нет"
-            },
-            new EmployeeView
-            {
-                Id = 2,
-                FirstName = "Владислав",
-                Patronymic = "Степанович",
-                LastName = "Оченьстариков",
-                Age = 125,
-                Detail = "Выпивает"
-            }
-        };
+            _employeesData = employeesData;
+        }
 
         public IActionResult Index()
         {
-            return View(_employees);
+            return View(_employeesData.GetAll());
         }
 
+        [Route("id")]
         public IActionResult Details(int id)
         {
-            return View(_employees[id-1]);
+            var employee = _employeesData.GetById(id);
+
+            if (ReferenceEquals(employee, null))
+                return NotFound();
+
+            return View(employee);
+        }
+
+        //Добавление или редактирование сотрудника
+        [Route("edit/{id?}")]
+        public IActionResult Edit(int? id)
+        {
+            EmployeeView model;
+            if (id.HasValue)
+            {
+                model = _employeesData.GetById(id.Value);
+                if (ReferenceEquals(model, null))
+                    return NotFound();
+            }
+            else
+            {
+                model = new EmployeeView();
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [Route("edit/{id?}")]
+        public IActionResult Edit(EmployeeView model)
+        {
+            if(model.Id>0)
+            {
+                var dbItem = _employeesData.GetById(model.Id);
+
+                if(ReferenceEquals(dbItem, null))
+                    return NotFound();
+
+                dbItem.FirstName = model.FirstName;
+                dbItem.Patronymic = model.Patronymic;
+                dbItem.LastName = model.LastName;
+                dbItem.Age = model.Age;
+                dbItem.Position = model.Position;
+            }
+            else
+            {
+                _employeesData.AddNew(model);
+            }
+            _employeesData.Commit();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        //Удаление сотрудника
+        [Route("delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            _employeesData.Delete(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
