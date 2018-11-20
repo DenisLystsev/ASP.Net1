@@ -57,7 +57,7 @@ namespace WebStore.Controllers
         [Route("edit/{id?}")]
         public IActionResult Edit(EmployeeView model)
         {
-            if (model.Age < 18 && model.Age > 75)
+            if (model.Age < 18 || model.Age > 75)
             {
                 ModelState.AddModelError("Age", "Ошибка возраста");
             }
