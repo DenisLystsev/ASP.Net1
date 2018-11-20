@@ -10,7 +10,7 @@ namespace WebStore.Models
     {
         public SectionViewModel()
         {
-            ChieldSections = new List<SectionViewModel>();
+            ChildSections = new List<SectionViewModel>();
         }
 
         public int Id { get; set; }
@@ -18,7 +18,7 @@ namespace WebStore.Models
         public int Order { get; set; }
 
         //Дочерние секции
-        public List<SectionViewModel> ChieldSections { get; set; }
+        public List<SectionViewModel> ChildSections { get; set; }
 
         //Родительская секция
         public SectionViewModel ParentSection { get; set; }

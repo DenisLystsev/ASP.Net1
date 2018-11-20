@@ -1,0 +1,9 @@
+D:\C#\ASP.Net1\WebStore.Domain\bin\Debug\netcoreapp2.0\WebStore.Domain.deps.json
+D:\C#\ASP.Net1\WebStore.Domain\bin\Debug\netcoreapp2.0\WebStore.Domain.dll
+D:\C#\ASP.Net1\WebStore.Domain\bin\Debug\netcoreapp2.0\WebStore.Domain.pdb
+D:\C#\ASP.Net1\WebStore.Domain\obj\Debug\netcoreapp2.0\WebStore.Domain.csprojResolveAssemblyReference.cache
+D:\C#\ASP.Net1\WebStore.Domain\obj\Debug\netcoreapp2.0\WebStore.Domain.csproj.CoreCompileInputs.cache
+D:\C#\ASP.Net1\WebStore.Domain\obj\Debug\netcoreapp2.0\WebStore.Domain.AssemblyInfoInputs.cache
+D:\C#\ASP.Net1\WebStore.Domain\obj\Debug\netcoreapp2.0\WebStore.Domain.AssemblyInfo.cs
+D:\C#\ASP.Net1\WebStore.Domain\obj\Debug\netcoreapp2.0\WebStore.Domain.dll
+D:\C#\ASP.Net1\WebStore.Domain\obj\Debug\netcoreapp2.0\WebStore.Domain.pdb

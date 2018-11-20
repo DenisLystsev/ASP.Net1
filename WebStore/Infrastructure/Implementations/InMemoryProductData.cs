@@ -183,7 +183,6 @@ namespace WebStore.Infrastructure.Implementations
                 Name = "Kids",
                 Order = 3,
                 ParentId = null
-                © geekbrains.ru 16
                 },
                 new Section ()
                 {
@@ -226,7 +225,7 @@ namespace WebStore.Infrastructure.Implementations
                 Name = "Shoes",
                 Order = 9,
                 ParentId = null
-                }
+                },
             };
             _brands = new List<Brand>()
             {

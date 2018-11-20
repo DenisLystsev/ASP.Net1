@@ -20,3 +20,5 @@ D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.AssemblyInfoInputs.cach
 D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.AssemblyInfo.cs
 D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.dll
 D:\C#\ASP.Net1\WebStore\obj\Debug\netcoreapp2.0\WebStore.pdb
+D:\C#\ASP.Net1\WebStore\bin\Debug\netcoreapp2.0\WebStore.Domain.dll
+D:\C#\ASP.Net1\WebStore\bin\Debug\netcoreapp2.0\WebStore.Domain.pdb
