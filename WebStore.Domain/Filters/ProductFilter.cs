@@ -8,6 +8,7 @@ namespace WebStore.Domain.Filters
     {
         // Секция, к которой принадлежит товар
         public int? SectionId { get; set; }
+
         // Бренд товара
         public int? BrandId { get; set; }
     }
